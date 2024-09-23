@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+    background-color: #fff8e1; /* Light Ivory */
+    font-family: 'Arial', sans-serif;
+    color: #4a148c; /* Dark Purple */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #e1bee7; /* Soft Lavender */
+    padding: 15px;
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #6a1b9a; /* Deep Plum */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d1c4e9; /* Light Lavender */
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px; /* Limit the width of the form */
+    margin: auto; /* Center the form */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    padding: 15px; /* Add padding for bigger entry spaces */
+    margin: 10px 0; /* Space between fields */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Increase font size for readability */
+}
+
+button {
+    padding: 15px; /* Larger button */
+    margin: 10px 0; /* Space above and below button */
+    background-color: #6a1b9a; /* Deep Plum */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Pointer on hover */
+}
+
+button:hover {
+    background-color: #d1c4e9; /* Light Lavender */
+}
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff; /* White background for recipe items */
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}

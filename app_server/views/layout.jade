@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+        title Recipe Sharing
+        link(rel='stylesheet', href='/styles.css') // Link to your CSS file
+    body
+        header
+            h1 Recipe Sharing Website
+            nav
+                ul
+                    li: a(href='/') Home
+                    li: a(href='/about') About
+                    li: a(href='/sign-in') Sign In
+                    li: a(href='/register') Register
+                    li: a(href='/submit-recipe') Add Recipe
+                    li: a(href='/view-recipes') View Recipes
+        .container
+            block content
