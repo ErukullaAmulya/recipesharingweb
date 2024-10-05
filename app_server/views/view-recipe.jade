@@ -2,11 +2,15 @@ extends layout
 
 block content
     .container
-        h2 Recipes
-        ul
+        h2 Recipe List
+        if recipes.length
             each recipe in recipes
-                li
+                .recipe
                     h3= recipe.title
                     p Category: #{recipe.category}
                     p Ingredients: #{recipe.ingredients}
                     p Instructions: #{recipe.instructions}
+                    if recipe.photo
+                        img(src=recipe.photo, alt='Recipe Photo', style='max-width: 100%;')
+        else
+            p No recipes available.

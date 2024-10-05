@@ -21,6 +21,10 @@ app.post('/add-recipe', recipeController.addRecipe);
 app.get('/submit-recipe', recipeController.submitRecipe);
 app.get('/view-recipes', recipeController.viewRecipes); 
 
+const fileUpload = require('express-fileupload');
+app.use(fileUpload());
+
+
 // Error handling middleware
 app.use(recipeController.handleError);
 

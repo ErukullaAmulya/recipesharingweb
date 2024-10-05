@@ -3,7 +3,7 @@ extends layout
 block content
     .container
         h2 Submit a Recipe
-        form(action='/add-recipe', method='post')
+        form(action='/add-recipe', method='post', enctype='multipart/form-data')
             label(for='title') Recipe Title:
             input(type='text', name='title', required)
             br
@@ -15,5 +15,8 @@ block content
             br
             label(for='instructions') Instructions:
             textarea(name='instructions', required)
+            br
+            label(for='photo') Upload Photo:
+            input(type='file', name='photo', accept='image/*', required)
             br
             button(type='submit') Submit Recipe
