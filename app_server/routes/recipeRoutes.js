@@ -1,16 +1,20 @@
 const express = require('express');
 const router = express.Router();
-const recipeController = require('../controllers/recipeController');
+const userController = require('./controllers/userController'); // Adjust the path as needed
 
-/**
- * App Routes 
- */
-router.get('/', recipeController.getHomepage);
-router.get('/about', recipeController.getAbout);
-router.get('/sign-in', recipeController.getSignIn);
-router.get('/register', recipeController.getRegister);
-router.get('/submit-recipe', recipeController.submitRecipe); // Ensure this line exists
-router.post('/add-recipe', recipeController.addRecipe); // This handles the form submission
-router.get('/view-recipes', recipeController.viewRecipes);
+// Public routes
+router.get('/', userController.getHomepage);
+router.get('/about', userController.getAbout);
+router.get('/sign-in', userController.getSignIn);
+router.get('/register', userController.getRegister);
+
+// Protected routes
+router.get('/submit-recipe', userController.submitRecipe);
+router.post('/add-recipe',userController.addRecipe);
+
+// Registration and login
+router.post('/register', userController.registerUser);
+router.post('/login', userController.loginUser);
+router.get('/logout', userController.logout);
 
 module.exports = router;

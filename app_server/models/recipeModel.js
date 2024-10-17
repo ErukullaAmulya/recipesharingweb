@@ -1,10 +1,15 @@
-class Recipe {
-    constructor(title, category, ingredients, instructions) {
-        this.title = title;
-        this.category = category;
-        this.ingredients = ingredients;
-        this.instructions = instructions;
-    }
-}
+const mongoose = require('mongoose');
 
-module.exports = Recipe;
+const recipeSchema = new mongoose.Schema({
+    title: { type: String, required: true },
+    category: { type: String, required: true },
+    ingredients: { type: String, required: true },
+    instructions: { type: String, required: true },
+    photo: { type: String, required: true }
+});
+
+module.exports = mongoose.model('Recipe', recipeSchema);
+
+
+
+
